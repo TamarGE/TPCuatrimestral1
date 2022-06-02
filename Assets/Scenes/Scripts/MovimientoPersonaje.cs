@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    public float movementSpeed;
-    public float rotationSpeed;
+    public float movementSpeed;// la preferida es = 0.1
+    public float rotationSpeed;// la preferida es = 2
     void Start()
     {
         
@@ -14,6 +14,7 @@ public class MovimientoPersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Movimiento:
         if (Input.GetKey(KeyCode.D))
         {
             //transform.position += new Vector3(0, 0, movementSpeed);
@@ -31,5 +32,18 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             transform.Translate(-movementSpeed, 0, 0);
         }
+
+        //Rotacion:
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(0, rotationSpeed, 0);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(0, -rotationSpeed, 0);
+        }
+
+        //Saltar:
+
     }
 }
