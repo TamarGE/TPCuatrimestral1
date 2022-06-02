@@ -16,16 +16,16 @@ public class Muerte : MonoBehaviour
         
     }
 
-    /*void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "PlanoCaida")
         {
             //Destroy(gameObject);
             transform.position = posicionInicio;
         }
-    }*/
-    void OnCollisionExit(Collision col)
+    }
+    /*void OnCollisionExit(Collision col)
     {
         transform.position = posicionInicio;
-    }
+    }*/
 }
