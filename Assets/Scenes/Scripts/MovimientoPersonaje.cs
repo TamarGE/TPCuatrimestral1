@@ -6,9 +6,16 @@ public class MovimientoPersonaje : MonoBehaviour
 {
     public float movementSpeed;// la preferida es = 0.1
     public float rotationSpeed;// la preferida es = 2
+    public float jumpForce;// la preferida es = 2
+    public int maxJumps;//la preefrida es = 4
+
+    int hasJump;
+    Rigidbody rb;
+
     void Start()
     {
-        
+        hasJump = maxJumps;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -44,6 +51,30 @@ public class MovimientoPersonaje : MonoBehaviour
         }
 
         //Saltar:
+        //Link código Jero. https://github.com/jeronimosanchezperuga/Cubo-WASD-AddForce-Jump/blob/main/Assets/PlayerController.cs
+        /*if (Input.GetKey(KeyCode.D) && hasJump == maxJumps)
+        {
+            transform.Rotate(0, rotationSpeed, 0);
+        }
+        if (Input.GetKey(KeyCode.A) && hasJump == maxJumps)
+        {
+            transform.Rotate(0, -rotationSpeed, 0);
+        }
 
+
+        if (Input.GetKeyDown(KeyCode.Space) && hasJump > 0)
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            hasJump--;
+        }
+
+
+        void OnCollisionEnter(Collision col)
+        {
+            if (col.gameObject.tag == "ground")
+            {
+                hasJump = maxJumps;
+            }
+        }*/
     }
 }
