@@ -14,6 +14,10 @@ public class MovimientoPersonaje : MonoBehaviour
     Rigidbody rb;
     public bool cubeEnElPiso = true;
 
+    /*
+    public float rotacion; // con esto estoy probando si puedop lograr que el personaje
+    public bool rotacionMenorA90 = true;// solo pueda rotar menos de 70 grados.
+    */
     void Start()
     {
         //hasJump = maxJumps;
@@ -43,6 +47,20 @@ public class MovimientoPersonaje : MonoBehaviour
         }
 
         //Rotacion:
+
+        /*
+        //estoy viendo si puedo obtener la rotacion del objeto y asegurarme que sea menor a 70. 
+        if (<70)
+        {
+        
+        }
+        
+        if(>=70)
+        {
+
+        }
+        */
+
         if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(0, rotationSpeed, 0);
