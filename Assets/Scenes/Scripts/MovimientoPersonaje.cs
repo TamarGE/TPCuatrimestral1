@@ -14,6 +14,10 @@ public class MovimientoPersonaje : MonoBehaviour
     Rigidbody rb;
     public bool cubeEnElPiso = true;
 
+    //sonido:
+    public AudioClip sonidoSalto;
+    AudioSource fuenteSonido;
+
     /*
     public float rotacion; // con esto estoy probando si puedop lograr que el personaje
     public bool rotacionMenorA90 = true;// solo pueda rotar menos de 70 grados.
@@ -22,6 +26,7 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         //hasJump = maxJumps;
         rb = GetComponent<Rigidbody>();
+        fuenteSonido = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,18 +53,9 @@ public class MovimientoPersonaje : MonoBehaviour
 
         //Rotacion:
 
-        /*
-        //estoy viendo si puedo obtener la rotacion del objeto y asegurarme que sea menor a 70. 
-        if (<70)
-        {
-        
-        }
-        
-        if(>=70)
-        {
-
-        }
-        */
+        /*//estoy viendo si puedo obtener la rotacion del objeto y asegurarme que sea menor a 70. 
+        if (<70){}
+        if(>=70){}*/
 
         if (Input.GetKey(KeyCode.E))
         {
@@ -76,11 +72,14 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
             cubeEnElPiso = false;
+            fuenteSonido.clip = sonidoSalto;
+            fuenteSonido.Play();
+
         }
     }
     private void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.name == "Piso")
+        if(col.gameObject.name == "Piso" || col.gameObject.name == "Plataforma")
         {
             cubeEnElPiso = true;
         }
