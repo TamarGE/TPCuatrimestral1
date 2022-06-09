@@ -16,7 +16,9 @@ public class MovimientoPersonaje : MonoBehaviour
 
     //sonido:
     public AudioClip sonidoSalto;
-    AudioSource fuenteSonido;
+    public AudioClip sonidoSlide;
+    AudioSource fuenteSonidoSaltar;
+    AudioSource fuenteSonidoSlide;
 
     /*
     public float rotacion; // con esto estoy probando si puedop lograr que el personaje
@@ -26,7 +28,8 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         //hasJump = maxJumps;
         rb = GetComponent<Rigidbody>();
-        fuenteSonido = GetComponent<AudioSource>();
+        fuenteSonidoSaltar = GetComponent<AudioSource>();
+        fuenteSonidoSlide = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,18 +40,26 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             //transform.position += new Vector3(0, 0, movementSpeed);
             transform.Translate(0, 0, movementSpeed);
+            fuenteSonidoSlide.clip = sonidoSlide;
+            fuenteSonidoSlide.Play();
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(0, 0, -movementSpeed);
+            fuenteSonidoSlide.clip = sonidoSlide;
+            fuenteSonidoSlide.Play();
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(movementSpeed, 0, 0);
+            fuenteSonidoSlide.clip = sonidoSlide;
+            fuenteSonidoSlide.Play();
         }
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(-movementSpeed, 0, 0);
+            fuenteSonidoSlide.clip = sonidoSlide;
+            fuenteSonidoSlide.Play();
         }
 
         //Rotacion:
@@ -72,8 +83,8 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
             cubeEnElPiso = false;
-            fuenteSonido.clip = sonidoSalto;
-            fuenteSonido.Play();
+            fuenteSonidoSaltar.clip = sonidoSalto;
+            fuenteSonidoSaltar.Play();
 
         }
     }
