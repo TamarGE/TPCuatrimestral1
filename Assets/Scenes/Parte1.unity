@@ -309,7 +309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -105}
+  m_AnchoredPosition: {x: -0, y: -68}
   m_SizeDelta: {x: 127.44928, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &244013473
@@ -950,12 +950,12 @@ GameObject:
   - component: {fileID: 1099161776}
   - component: {fileID: 1099161775}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TextoInicio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1099161774
 RectTransform:
   m_ObjectHideFlags: 0
@@ -972,8 +972,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 5}
-  m_SizeDelta: {x: 243.18634, y: 99.69708}
+  m_AnchoredPosition: {x: 1, y: 16}
+  m_SizeDelta: {x: 227.54337, y: 99.69708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099161775
 MonoBehaviour:
@@ -1000,14 +1000,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "Presione el bot\xF3n \"Siguiente\" para leer as intrucciones o \"Empezar\"
-    para comenzar a jugar."
+  m_Text: "\xA1Bienvenid@! \nPresione el bot\xF3n \"Siguiente\" para leer las intrucciones."
 --- !u!222 &1099161776
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1177,7 +1176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1176570885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1315,9 +1314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7d14e71845c184dadefe384c9b490d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textoInicial: {fileID: 0}
-  Instrucciones: {fileID: 0}
-  botonEmpezar: {fileID: 0}
+  textoInicial: {fileID: 1099161773}
+  Instrucciones: {fileID: 1711028139}
+  botonEmpezar: {fileID: 1176570884}
+  botonSeguir: {fileID: 244013471}
   seVe: 1
 --- !u!4 &1392202996
 Transform:
@@ -1364,6 +1364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myObject: {fileID: 1021045442}
+  botonEmpezar: {fileID: 1176570884}
+  Instrucciones: {fileID: 1711028139}
   seVe: 0
 --- !u!4 &1475580790
 Transform:
@@ -1396,7 +1398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1711028140
 RectTransform:
   m_ObjectHideFlags: 0
