@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -741,7 +741,7 @@ MonoBehaviour:
   speed: 10
   cubeEnElPiso: 1
   sonidoSalto: {fileID: 8300000, guid: e5b17583e57ba2745ace5bf6e6994b56, type: 3}
-  sonidoSlide: {fileID: 0}
+  sonidoSlide: {fileID: 8300000, guid: 722edba0015a3cb4bb7382c8fd0bb24a, type: 3}
 --- !u!54 &1021045444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -854,13 +854,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e5b17583e57ba2745ace5bf6e6994b56, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 183
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

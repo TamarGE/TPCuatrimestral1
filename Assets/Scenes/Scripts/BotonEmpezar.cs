@@ -5,18 +5,32 @@ using UnityEngine.UI;
 
 public class BotonEmpezar : MonoBehaviour
 {
-    public GameObject myObject;
     public GameObject botonEmpezar;
     public GameObject Instrucciones;
+    public GameObject cuentaRegresiva;
+
     public bool seVe = false;
-    public void Ver()
+
+    public float tiempoCambiar;
+    public float tiempoEspera;
+    void Start()
+    {
+
+    }
+
+    void Update()
+    {
+
+    }
+        public void Ver()
     {
         if (seVe == false)
         {
-            myObject.SetActive(!myObject.activeInHierarchy);
             Instrucciones.SetActive(!Instrucciones.activeInHierarchy);
             botonEmpezar.SetActive(!botonEmpezar.activeInHierarchy);
+            cuentaRegresiva.SetActive(!cuentaRegresiva.activeInHierarchy);
             seVe = true;
+            
         }
     }
 }

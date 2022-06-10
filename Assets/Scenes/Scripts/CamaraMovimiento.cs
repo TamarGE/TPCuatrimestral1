@@ -2,17 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CamaraMovimiento : MonoBehaviour
+public class MovimientoCamara : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float movementSpeed;
+    public float rotationSpeed;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //Movimiento:
+        if (Input.GetKey(KeyCode.D))
+        {
+            //transform.position += new Vector3(0, 0, movementSpeed);
+            transform.Translate(0, 0, movementSpeed);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(0, 0, -movementSpeed);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(movementSpeed, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            transform.Translate(-movementSpeed, 0, 0);
+        }
     }
 }

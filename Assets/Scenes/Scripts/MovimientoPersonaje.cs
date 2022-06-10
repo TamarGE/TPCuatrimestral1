@@ -40,26 +40,38 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             //transform.position += new Vector3(0, 0, movementSpeed);
             transform.Translate(0, 0, movementSpeed);
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
+            if (cubeEnElPiso)
+            {
+                fuenteSonidoSlide.clip = sonidoSlide;
+                fuenteSonidoSlide.Play();
+            }
         }
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(0, 0, -movementSpeed);
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
+            if (cubeEnElPiso)
+            {
+                fuenteSonidoSlide.clip = sonidoSlide;
+                fuenteSonidoSlide.Play();
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(movementSpeed, 0, 0);
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
+            if (cubeEnElPiso)
+            {
+                fuenteSonidoSlide.clip = sonidoSlide;
+                fuenteSonidoSlide.Play();
+            }
         }
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(-movementSpeed, 0, 0);
-            fuenteSonidoSlide.clip = sonidoSlide;
-            fuenteSonidoSlide.Play();
+            if (cubeEnElPiso)
+            {
+                fuenteSonidoSlide.clip = sonidoSlide;
+                fuenteSonidoSlide.Play();
+            }
         }
 
         //Rotacion:
