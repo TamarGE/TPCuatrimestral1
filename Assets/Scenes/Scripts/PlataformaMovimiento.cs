@@ -4,15 +4,47 @@ using UnityEngine;
 
 public class PlataformaMovimiento : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float sube;
+    public float alturaLimite;
+    public bool subir = false;
+    public bool cuboToca = false; 
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter(Collision tocando)
     {
-        
+        if (tocando.gameObject.name == "Cube")
+        {
+            cuboToca = true;
+            subir = true;
+            if (subir)
+            {
+                transform.Translate(sube, 0, 0);
+            }
+            if (transform.position.y == alturaLimite && cuboToca)
+            {
+                subir = false;
+
+            }
+        }
     }
+        void Update()
+    {
+            
+    }
+    
+    void OnCollisionExit(Collision sintocar)
+        {
+            if (sintocar.gameObject.name == "Cube")
+            {
+                cuboToca = false;
+            }
+        }
+
+
+
+
+
 }
