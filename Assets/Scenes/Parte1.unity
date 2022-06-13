@@ -198,8 +198,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93000429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15.704039, y: 0.99999946, z: 18.582075}
+  m_LocalPosition: {x: -80, y: 0, z: 0}
+  m_LocalScale: {x: 18.438673, y: 1, z: 1.0721338}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -484,8 +484,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292509395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
-  m_LocalScale: {x: 20.331535, y: 0.99999946, z: 22.563623}
+  m_LocalPosition: {x: -85, y: -0.1, z: 0}
+  m_LocalScale: {x: 20.331583, y: 1, z: 1.8790101}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -565,13 +565,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.21624975, y: 0.6531066, z: -0.20267266, w: -0.69685847}
-  m_LocalPosition: {x: 4, y: 4, z: 0}
+  m_LocalRotation: {x: 0.21263108, y: -0.67437977, z: 0.21263108, w: 0.67437977}
+  m_LocalPosition: {x: 3.33, y: 3.94, z: 0.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 35, y: -90, z: 0}
 --- !u!1 &708492668
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +699,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &945867221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945867223}
+  - component: {fileID: 945867222}
+  m_Layer: 0
+  m_Name: InstantianteCode1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &945867222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945867221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e507bbc2967b0649beb10427d548a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obst1: {fileID: 1552435340655092408, guid: 4da9f343046451343ba91a28674f9b01, type: 3}
+--- !u!4 &945867223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945867221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.009386, y: -176.12541, z: -6.8367176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021045442
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,7 +760,7 @@ GameObject:
   - component: {fileID: 1021045449}
   - component: {fileID: 1021045450}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Cubito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,7 +785,7 @@ MonoBehaviour:
   speed: 10
   cubeEnElPiso: 1
   sonidoSalto: {fileID: 8300000, guid: e5b17583e57ba2745ace5bf6e6994b56, type: 3}
-  sonidoSlide: {fileID: 0}
+  sonidoSlide: {fileID: 8300000, guid: 722edba0015a3cb4bb7382c8fd0bb24a, type: 3}
 --- !u!54 &1021045444
 Rigidbody:
   m_ObjectHideFlags: 0

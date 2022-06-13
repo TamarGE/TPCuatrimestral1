@@ -18,7 +18,7 @@ public class Muerte : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "PlanoCaida")
+        if (col.gameObject.name == "PlanoCaida" || col.gameObject.name == "obstaculo")
         {
             //Destroy(gameObject);
             transform.position = posicionInicio;
