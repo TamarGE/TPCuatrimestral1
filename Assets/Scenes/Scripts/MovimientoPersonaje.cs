@@ -63,11 +63,8 @@ public class MovimientoPersonaje : MonoBehaviour
         }
 
         //Rotacion:
-
-        /*//estoy viendo si puedo obtener la rotacion del objeto y asegurarme que sea menor a 70. 
-        if (<70){}
-        if(>=70){}*/
-
+        //decidí no agregar rotación como variable
+/*
         if (Input.GetKey(KeyCode.E))
         {
             transform.Rotate(0, rotationSpeed, 0);
@@ -75,13 +72,13 @@ public class MovimientoPersonaje : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             transform.Rotate(0, -rotationSpeed, 0);
-        }
+        }*/
 
 
         //Saltar:
         if (Input.GetKey(KeyCode.Space) && cubeEnElPiso)
         {
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            rb.AddForce(new Vector3(0, 7, 0), ForceMode.Impulse);
             cubeEnElPiso = false;
             fuenteSonidoSaltar.clip = sonidoSalto;
             fuenteSonidoSaltar.Play();

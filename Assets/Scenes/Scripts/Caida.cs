@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Muerte : MonoBehaviour
+public class Caida : MonoBehaviour
 {
-    Vector3 posicionInicio = new Vector3 (0, 2, 0);
-    Vector3 rotacionInicio = new Vector3 (0, 0, 0); 
+    Vector3 posicionInicio;
+    //Vector3 rotacionInicio = new Vector3 (0, 0, 0); 
     void Start()
     {
-        
+        posicionInicio = transform.position;
     }
 
     void Update()
