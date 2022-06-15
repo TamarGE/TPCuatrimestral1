@@ -7,7 +7,8 @@ public class BotonEmpezar : MonoBehaviour
 {
     public GameObject botonEmpezar;
     public GameObject Instrucciones;
-    public GameObject cuentaRegresiva;
+    public GameObject cubito;
+    // public GameObject cuentaRegresiva;
 
     public bool seVe = false;
 
@@ -28,7 +29,8 @@ public class BotonEmpezar : MonoBehaviour
         {
             Instrucciones.SetActive(!Instrucciones.activeInHierarchy);
             botonEmpezar.SetActive(!botonEmpezar.activeInHierarchy);
-            cuentaRegresiva.SetActive(!cuentaRegresiva.activeInHierarchy);
+            cubito.SetActive(!cubito.activeInHierarchy);
+            //cuentaRegresiva.SetActive(!cuentaRegresiva.activeInHierarchy);
             seVe = true;
             
         }
