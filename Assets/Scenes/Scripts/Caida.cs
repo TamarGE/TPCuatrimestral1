@@ -16,9 +16,9 @@ public class Caida : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter(Collision die)
     {
-        if (col.gameObject.name == "PlanoCaida" || col.gameObject.name == "obstaculo")
+        if (die.gameObject.name == "PlanoCaida" || die.gameObject.name == "obstaculo")
         {
             //Destroy(gameObject);
             transform.position = posicionInicio;

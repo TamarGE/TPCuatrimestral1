@@ -1722,10 +1722,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb2e37306427da42a95680b294ee6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myObject: {fileID: 1021045442}
   botonEmpezar: {fileID: 1176570884}
   Instrucciones: {fileID: 1711028139}
+  cubito: {fileID: 0}
   seVe: 0
+  tiempoCambiar: 0
+  tiempoEspera: 0
 --- !u!4 &1475580790
 Transform:
   m_ObjectHideFlags: 0
